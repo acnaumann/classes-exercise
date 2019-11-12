@@ -18,6 +18,14 @@ def main():
     tree.pass_growing_season()
     print(tree)
 
+  print(tree)
+
+  if tree.has_oranges():
+    orange = tree.harvest_orange()
+    print(orange.diameter)
+
+  print(tree)
+
 
   print("Tree matured")
 

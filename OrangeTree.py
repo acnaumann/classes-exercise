@@ -45,11 +45,18 @@ class OrangeTree:
 
   # Add instance method: has_oranges() which returns whether or not a tree has any oranges on it.
   def has_oranges(self):
-    pass
+    return len(self.oranges) > 0
+    
 
   # Should pick an orange of a tree and return it.
   # Or throw an error if there are no oranges.
   def harvest_orange(self):
+    if self.has_oranges():
+      #Add ability to pick randomly indexed orange form self.oranges
+      random_orange = random.randrange(0, len(self.oranges))
+      return self.oranges.pop(random_orange)
+    else:
+      return None
     pass
     
 
